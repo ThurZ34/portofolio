@@ -1,0 +1,44 @@
+.hero-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem; /* Jarak antara avatar dan teks */
+  padding: 4rem 2rem;
+}
+
+.pixel-avatar-img {
+  width: 200px;
+  height: 200px;
+  /* border: 4px solid white; */ /* Dihapus */
+  image-rendering: pixelated; /* Pastikan gambar tetap tajam */
+}
+
+/* Animasi mata berkedip (dihapus karena tidak relevan lagi) */
+
+.hero-text-container {
+  max-width: 800px;
+}
+
+.hero-text {
+  font-size: 2rem;
+  text-align: left;
+  line-height: 1.5;
+}
+
+.dynamic-text {
+  color: #c3a9ff; /* Purple Accent */
+}
+
+.cursor {
+  animation: blink 1s step-end infinite;
+  margin-left: 0.25rem;
+}
+
+@keyframes blink {
+  from, to {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}

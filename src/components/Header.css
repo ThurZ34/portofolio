@@ -1,0 +1,30 @@
+.app-header {
+  width: 100%;
+  padding: 1rem 2rem;
+  display: grid; /* Menggunakan CSS Grid */
+  grid-template-columns: 1fr auto 1fr; /* 3 kolom: kiri, tengah, kanan */
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.logo {
+  grid-column: 1; /* Tempatkan logo di kolom pertama */
+  justify-self: start; /* Ratakan logo ke kiri dalam kolomnya */
+  font-size: 1.5rem;
+}
+
+.app-header nav {
+  grid-column: 2; /* Tempatkan navigasi di kolom kedua */
+  justify-self: center; /* Ratakan navigasi ke tengah dalam kolomnya */
+}
+
+.app-header nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 0.75rem; /* Sesuaikan margin untuk horizontal */
+  font-size: 1rem;
+}
+
+.app-header nav a:hover {
+  text-decoration: underline;
+}

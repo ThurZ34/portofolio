@@ -1,0 +1,8 @@
+.App {
+  min-height: 100vh;
+}
+
+.App main {
+  padding: 2rem;
+  margin: 2rem;
+}

@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+  font-family: 'Press Start 2P', system-ui;
+  line-height: 1.5;
+  font-weight: 400;
+  color: white;
+  background-color: #2c2a4a; /* Warna dasar langit ungu */
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+img {
+  image-rendering: pixelated;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  min-width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* --- LAPISAN EFEK PARALLAX (SEAMLESS) --- */
+
+/* Fungsi: Membuat 2 set box-shadow untuk loop yang mulus */
+/* Set 1: Posisi asli. Set 2: Posisi asli + 2000px di sumbu X */
+
+/* Lapisan 1: Bintang kecil, tercepat */
+body::before {
+  content: '';
+  position: absolute;
+  width: 1px; height: 1px;
+  background: transparent;
+  box-shadow: 
+    -234px 293px #FFF, 386px 438px #FFF, -461px 443px #FFF, 43px 223px #FFF, 255px 334px #FFF, 395px 186px #FFF, -341px 1px #FFF, 490px 44px #FFF, 34px 33px #FFF, 159px 110px #FFF, -192px 230px #FFF, 337px 337px #FFF, 413px 465px #FFF, 495px 468px #FFF, -254px 166px #FFF, 
+    1766px 293px #FFF, 2386px 438px #FFF, 1539px 443px #FFF, 2043px 223px #FFF, 2255px 334px #FFF, 2395px 186px #FFF, 1659px 1px #FFF, 2490px 44px #FFF, 2034px 33px #FFF, 2159px 110px #FFF, 1808px 230px #FFF, 2337px 337px #FFF, 2413px 465px #FFF, 2495px 468px #FFF, 1746px 166px #FFF;
+  animation: anim-stars 50s linear infinite;
+}
+
+/* Lapisan 2: Bintang sedang, kecepatan medium */
+body::after {
+  content: '';
+  position: absolute;
+  width: 2px; height: 2px;
+  background: transparent;
+  box-shadow: 
+    49px 193px #FFF, -414px 458px #FFF, 449px 13px #FFF, -257px 253px #FFF, 405px 34px #FFF, 195px 486px #FFF, -141px 401px #FFF, 90px 244px #FFF, -34px 333px #FFF, 189px 180px #FFF, -492px 23px #FFF, 7px 37px #FFF, 433px 65px #FFF, -495px 268px #FFF, 254px 466px #FFF,
+    2049px 193px #FFF, 1586px 458px #FFF, 2449px 13px #FFF, 1743px 253px #FFF, 2405px 34px #FFF, 2195px 486px #FFF, 1859px 401px #FFF, 2090px 244px #FFF, 1966px 333px #FFF, 2189px 180px #FFF, 1508px 23px #FFF, 2007px 37px #FFF, 2433px 65px #FFF, 1505px 268px #FFF, 2254px 466px #FFF;
+  animation: anim-stars 100s linear infinite;
+}
+
+/* Lapisan 3: Bintang besar, paling lambat */
+html::before {
+  content: '';
+  position: absolute;
+  width: 3px; height: 3px;
+  background: transparent;
+  box-shadow: 
+    69px 293px #FFF, -114px 58px #FFF, 49px 313px #FFF, 257px 53px #FFF, -405px 134px #FFF, 195px 86px #FFF, 141px 201px #FFF, -90px 444px #FFF, 34px 33px #FFF, -189px 180px #FFF, 492px 423px #FFF, -7px 237px #FFF, 233px 265px #FFF, 495px 68px #FFF, -254px 266px #FFF,
+    2069px 293px #FFF, 1886px 58px #FFF, 2049px 313px #FFF, 2257px 53px #FFF, 1595px 134px #FFF, 2195px 86px #FFF, 2141px 201px #FFF, 1910px 444px #FFF, 2034px 33px #FFF, 1811px 180px #FFF, 2492px 423px #FFF, 1993px 237px #FFF, 2233px 265px #FFF, 2495px 68px #FFF, 1746px 266px #FFF;
+  animation: anim-stars 150s linear infinite;
+}
+
+@keyframes anim-stars {
+  from { transform: translateX(0px); }
+  to { transform: translateX(-2000px); }
+}
+
+h1 {
+  font-size: 2em;
+  line-height: 1.2;
+}
+
+button {
+  border-radius: 0;
+  border: 2px solid white;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.25s;
+}
+
+button:hover {
+  background-color: #444;
+}
