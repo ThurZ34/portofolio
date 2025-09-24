@@ -3,6 +3,38 @@
 }
 
 .App main {
-  padding: 2rem;
-  margin: 2rem;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.App main::-webkit-scrollbar {
+  display: none;
+}
+
+.dynamic-bg {
+  background-size: cover;
+  background-position: center;
+  transition: background-image 0.3s ease-in-out;
+}
+
+.celestial-bg {
+  background-image: url('./assets/celestial.png');
+}
+
+.game1-bg {
+  background-image: url('./assets/game1.png');
+}
+
+.game2-bg {
+  background-image: url('./assets/game2.jpg');
+}
+
+.space-bg {
+  background-image: url('./assets/space.png');
 }
