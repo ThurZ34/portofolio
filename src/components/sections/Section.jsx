@@ -2,7 +2,7 @@ import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import './Sections.css';
 
-function Section({ setBackground, backgroundName, children }) {
+function Section({ setBackground, backgroundName, children, id }) {
   const { ref, inView } = useInView({
     threshold: 0.5,
   });
@@ -14,7 +14,7 @@ function Section({ setBackground, backgroundName, children }) {
   }, [inView, setBackground, backgroundName]);
 
   return (
-    <div ref={ref} className="section">
+    <div id={id} ref={ref} className="section">
       {children}
     </div>
   );

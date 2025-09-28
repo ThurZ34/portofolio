@@ -18,17 +18,22 @@ function App() {
     <div className={`App dynamic-bg ${backgroundClasses[background]}`}>
       <Header />
       <main>
-        <Section setBackground={setBackground} backgroundName="celestial">
+        <Section id="home" setBackground={setBackground} backgroundName="celestial">
           <Hero />
         </Section>
-        <Section setBackground={setBackground} backgroundName="game1">
+        <Section id="about" setBackground={setBackground} backgroundName="space">
+          <h2>About Me</h2>
+          <p>A short bio about myself.</p>
+        </Section>
+        <Section id="projects" setBackground={setBackground} backgroundName="game1">
+          <h2>Projects</h2>
           <h1>Game 1</h1>
-        </Section>
-        <Section setBackground={setBackground} backgroundName="game2">
           <h1>Game 2</h1>
-        </Section>
-        <Section setBackground={setBackground} backgroundName="space">
           <h1>Space</h1>
+        </Section>
+        <Section id="contact" setBackground={setBackground} backgroundName="celestial">
+          <h2>Contact Me</h2>
+          <p>Contact form or information.</p>
         </Section>
       </main>
     </div>

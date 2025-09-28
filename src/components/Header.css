@@ -1,4 +1,9 @@
 .app-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
   width: 100%;
   padding: 1rem 2rem;
   display: grid; /* Menggunakan CSS Grid */
